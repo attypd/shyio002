@@ -1,0 +1,33 @@
+name: BrowserUpdate
+on:
+  workflow_dispatch: # 手动触发
+  schedule:
+    - cron: '0 22 * * *' # 每天北京时间早晨6点运行
+
+jobs:
+  run-browser-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+
+      - name: 安装 Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: 安装浏览器内核
+        run: |
+          pip install playwright
+          playwright install chromium # 这一步就是在部署真实浏览器
+
+      - name: 执行抓取
+        run: python main.py
+
+      - name: 推送更新
+        run: |
+          git config --local user.email "bot@github.com"
+          git config --local user.name "BrowserBot"
+          git add bootstrap.min.css
+          git commit -m "通过真实浏览器内核更新源" || exit 0
+          git push
