@@ -1,0 +1,36 @@
+name: BrowserBot
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'main.py'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          
+      - name: 安装浏览器及底层插件
+        run: |
+          pip install playwright
+          playwright install chromium
+          playwright install-deps chromium # 这就是你问的安装底层插件
+          
+      - name: 执行抓取
+        run: python main.py
+        
+      - name: 强制同步仓库
+        run: |
+          git config --local user.email "bot@github.com"
+          git config --local user.name "BrowserBot"
+          git add -A
+          git commit --allow-empty -m "Update $(date)"
+          git push origin main
