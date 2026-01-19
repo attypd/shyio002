@@ -1,8 +1,9 @@
-name: SyncAssets
+name: AutoSyncLive
 on:
   schedule:
-    - cron: '30 22 * * *'  # 每天早上6:30自动更新
-  workflow_dispatch:      # 允许手动启动按钮
+    - cron: '0 22 * * *'  # 每天北京时间早上 6:00 自动更新
+  workflow_dispatch:      # 这个参数开启了【手动运行】按钮
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,9 +14,10 @@ jobs:
           python-version: '3.10'
       - run: pip install requests
       - run: python main.py
-      - run: |
+      - name: Commit and Push
+        run: |
           git config --local user.email "bot@github.com"
-          git config --local user.name "AssetBot"
+          git config --local user.name "LiveBot"
           git add bootstrap.min.css
-          git commit -m "Sync assets" || exit 0
+          git commit -m "Update source [$(date)]" || exit 0
           git push
