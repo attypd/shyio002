@@ -1,0 +1,21 @@
+name: SyncAssets
+on:
+  schedule:
+    - cron: '30 22 * * *'  # 每天早上6:30自动更新
+  workflow_dispatch:      # 允许手动启动按钮
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: pip install requests
+      - run: python main.py
+      - run: |
+          git config --local user.email "bot@github.com"
+          git config --local user.name "AssetBot"
+          git add bootstrap.min.css
+          git commit -m "Sync assets" || exit 0
+          git push
