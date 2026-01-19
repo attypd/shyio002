@@ -1,0 +1,39 @@
+name: BrowserUpdate
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'main.py'
+  schedule:
+    - cron: '0 22 * * *'
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 必须赋予写入权限
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: 设置 Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          
+      - name: 部署浏览器环境
+        run: |
+          pip install playwright
+          playwright install chromium
+          playwright install-deps chromium
+          
+      - name: 执行真实抓取
+        run: python main.py
+        
+      - name: 强制推送结果
+        run: |
+          git config --local user.email "bot@github.com"
+          git config --local user.name "BrowserBot"
+          # 使用 git add -A 解决之前文件不存在导致的报错
+          git add -A 
+          git commit -m "自动更新源文件" || exit 0
+          git push
