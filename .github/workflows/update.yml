@@ -1,0 +1,41 @@
+name: GlobalAutoUpdateBot
+on:
+  workflow_dispatch:  # 支持手动点击运行
+  push:
+    paths:
+      - 'main.py'    # 修改关键词后自动触发
+  schedule:
+    - cron: '0 22 * * *' # 每天北京时间凌晨6点自动更新
+
+jobs:
+  run-task:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 开启核心写入权限
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+      
+      - name: 安装 Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          
+      - name: 安装浏览器插件及所有底层依赖
+        run: |
+          pip install playwright
+          playwright install chromium
+          playwright install-deps chromium # 解决 Linux 系统运行浏览器的所有环境问题
+          
+      - name: 执行真实浏览器抓取
+        run: python main.py
+        
+      - name: 暴力推送到仓库首页
+        run: |
+          git config --local user.email "bot@github.com"
+          git config --local user.name "BrowserBot"
+          git add -A
+          # allow-empty 确保哪怕内容没变也强制提交生成新时间戳
+          git commit --allow-empty -m "Update source: $(date)"
+          # 强制推送到主分支，确保文件在首页
+          git push --force origin main
