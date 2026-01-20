@@ -1,0 +1,33 @@
+name: GlobalAutoUpdateBot
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'main.py'
+
+jobs:
+  update-source:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 必须开启权限
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: 环境准备
+        run: |
+          pip install playwright
+          playwright install chromium
+          playwright install-deps chromium
+          
+      - name: 执行抓取
+        run: python main.py
+        
+      - name: 暴力推送到首页
+        run: |
+          git config --local user.email "bot@github.com"
+          git config --local user.name "BrowserBot"
+          git add -A
+          # allow-empty 确保即使内容一致也强制生成新时间戳
+          git commit --allow-empty -m "Update source: $(date)"
+          # 强制覆盖 main 分支，解决权限拒绝问题
+          git push --force origin main
