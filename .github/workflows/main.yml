@@ -1,0 +1,21 @@
+name: 15分钟自动扫描对时更新
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+jobs:
+  run_update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: 安装依赖
+        run: pip install requests
+      - name: 运行扫描脚本
+        run: python update_all.py
+      - name: 提交并对时
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "自动更新对时: $(date)" || exit 0
+          git push
