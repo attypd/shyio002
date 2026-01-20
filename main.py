@@ -30,8 +30,15 @@ async def main():
             
             content = await page.content()
             # 提取 /i/数字.txt
-            ids = re.findall(r'/i/(\d+)\.txt', content)
-            all_ids.update(ids)
+                    # 优化后的提取规则：同时抓取多种可能的链接格式
+        ids = re.findall(r'i/(\d+)\.txt', content) 
+        if not ids:
+            # 备选规则：直接抓取 数字.txt
+            ids = re.findall(r'(\d+)\.txt', content)
+            
+        all_ids.update(ids)
+        print(f"✅ 穿透成功！提取到 {len(all_ids)} 个资源链接")
+
             print(f"✅ 穿透成功！提取到 {len(ids)} 个资源链接")
             
         except Exception as e:
