@@ -771,6 +771,64 @@ VTV7,http://url.cdnhs.store:48559/hstw.php?id=vtv7
 VTV8,http://url.cdnhs.store:48559/hstw.php?id=vtv8
 VTV9,http://url.cdnhs.store:48559/hstw.php?id=vtv9
 VTV CẦN THƠ,http://url.cdnhs.store:48559/hstw.php?id=vtvCanTho
+体育频道,#genre#
+NBA TV,http://url.cdnhs.store:48559/hstw.php?id=nbatv
+DAZN 1,http://url.cdnhs.store:48559/hstw.php?id=dazn1
+DAZN 2,http://url.cdnhs.store:48559/hstw.php?id=dazn2
+Ginx TV,http://url.cdnhs.store:48559/hstw.php?id=ginxtv
+TRACE SportStars,http://url.cdnhs.store:48559/hstw.php?id=tracesport
+Hub Sports 1,http://url.cdnhs.store:48559/hstw.php?id=hubsports1
+Hub Sports 2,http://url.cdnhs.store:48559/hstw.php?id=hubsports2
+Hub Sports 3,http://url.cdnhs.store:48559/hstw.php?id=hubsports3
+Hub Premier 1,http://url.cdnhs.store:48559/hstw.php?id=hubpremier1
+Hub Premier 2,http://url.cdnhs.store:48559/hstw.php?id=hubpremier2
+Astro Arena,http://url.cdnhs.store:48559/hstw.php?id=astroarena
+Sukan RTM,http://url.cdnhs.store:48559/hstw.php?id=sukanrtm
+SPOTV,http://url.cdnhs.store:48559/hstw.php?id=spotv
+SPOTV 2,http://url.cdnhs.store:48559/hstw.php?id=spotv2
+SBS Sports,http://url.cdnhs.store:48559/hstw.php?id=sbssports
+MBC Sports+,http://url.cdnhs.store:48559/hstw.php?id=mbcsports
+KBSN Sports,http://url.cdnhs.store:48559/hstw.php?id=kbsnsports
+SKY Sports,http://url.cdnhs.store:48559/hstw.php?id=skysports
+JTBC Golf,http://url.cdnhs.store:48559/hstw.php?id=jtbcgolf
+SBS Golf,http://url.cdnhs.store:48559/hstw.php?id=sbsgolf
+beIN Sports 1,http://url.cdnhs.store:48559/hstw.php?id=beinsports1
+beIN Sports 2,http://url.cdnhs.store:48559/hstw.php?id=beinsports2
+
+新闻频道,#genre#
+CGTN,http://url.cdnhs.store:48559/hstw.php?id=cgtn
+CNN,http://url.cdnhs.store:48559/hstw.php?id=cnn
+BBC News,http://url.cdnhs.store:48559/hstw.php?id=bbcnews
+Al Jazeera English,http://url.cdnhs.store:48559/hstw.php?id=aljazeeraen
+CNA,http://url.cdnhs.store:48559/hstw.php?id=cna
+CNBC Asia,http://url.cdnhs.store:48559/hstw.php?id=cnbcasia
+Bloomberg TV,http://url.cdnhs.store:48559/hstw.php?id=bloomberg
+ABC Australia,http://url.cdnhs.store:48559/hstw.php?id=abcaustralia
+DW English,http://url.cdnhs.store:48559/hstw.php?id=dwenglish
+France 24,http://url.cdnhs.store:48559/hstw.php?id=france24
+
+电影频道,#genre#
+摇滚电影,http://url.cdnhs.store:48559/hstw.php?id=rockmovie
+摇滚极限,http://url.cdnhs.store:48559/hstw.php?id=rockextreme
+Cinemax,http://url.cdnhs.store:48559/hstw.php?id=cinemax
+AXN,http://url.cdnhs.store:48559/hstw.php?id=axn
+MovieMovie,http://url.cdnhs.store:48559/hstw.php?id=moviemovie
+Action Hollywood,http://url.cdnhs.store:48559/hstw.php?id=actionhollywood
+Rialto Classic,http://url.cdnhs.store:48559/hstw.php?id=rialtoclassic
+CHC动作电影,http://url.cdnhs.store:48559/hstw.php?id=chcaction
+CHC家庭电影,http://url.cdnhs.store:48559/hstw.php?id=chcfamily
+CHC影迷电影,http://url.cdnhs.store:48559/hstw.php?id=chcmovie
+
+娱乐频道,#genre#
+无线亚洲新闻,http://url.cdnhs.store:48559/hstw.php?id=MytvTvbsAsia
+亚洲综合娱乐台,http://url.cdnhs.store:48559/hstw.php?id=MYTVASIAVARIETY
+摇滚娱乐,http://url.cdnhs.store:48559/hstw.php?id=CRTE
+FASHIONONEHK,http://url.cdnhs.store:48559/hstw.php?id=FASHIONONEHK
+FashionBox,http://url.cdnhs.store:48559/hstw.php?id=MytvFashionBox
+Mezzo Live,http://url.cdnhs.store:48559/hstw.php?id=MytvMezzoLive
+TRACE Urban,http://url.cdnhs.store:48559/hstw.php?id=traceurban
+Sun Music,http://url.cdnhs.store:48559/hstw.php?id=sunmusic
+MTV Live,http://url.cdnhs.store:48559/hstw.php?id=mtvlive
 私密频道~1818,#genre#
 松视1,http://url.cdnhs.store:48559/hstw.php?id=sonsee1
 松视2,http://url.cdnhs.store:48559/hstw.php?id=sonsee2
