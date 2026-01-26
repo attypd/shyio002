@@ -1635,4 +1635,4 @@ XY Plus,http://url.cdnhs.store:43222/hstw.php?id=XYPlus
 XY Mix,http://url.cdnhs.store:43222/hstw.php?id=XYMix
 XXL,http://url.cdnhs.store:43222/hstw.php?id=XXL
 
-# 自动对时更新: 2026-01-27 04:58:31 | 当前端口: 43222
+# 自动对时更新: 2026-01-27 05:32:59 | 当前端口: 43222
