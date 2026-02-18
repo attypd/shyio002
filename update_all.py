@@ -65,17 +65,4 @@ def update_files():
         return
 
     # 文件 1: 全量源 (total_live.txt) - 顺序和你原始文件完全一致
-    with open("total_live.txt", "w", encoding="utf-8") as f:
-        f.write("\n".join(total_lines))
-        f.write(f"\n\n# 自动对时更新: {bj_time} | 当前端口: {new_port}")
-
-    # 文件 2: 独立私密源 (private_only.txt)
-    if private_only_lines:
-        with open("private_only.txt", "w", encoding="utf-8") as f:
-            f.write("\n".join(private_only_lines))
-            f.write(f"\n\n# 对时: {bj_time}")
-
-    print(f"✅ 更新成功！发现端口: {new_port} | 时间: {bj_time}")
-
-if __name__ == "__main__":
-    update_files()
+    with
