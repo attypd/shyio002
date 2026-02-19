@@ -830,4 +830,4 @@ XY Plus,http://url.cdnhs.store:47183/hstw.php?id=XYPlus
 XY Mix,http://url.cdnhs.store:47183/hstw.php?id=XYMix
 XXL,http://url.cdnhs.store:47183/hstw.php?id=XXL
 
-# Auto-Sync: 2026-02-20 03:09:50 | Port: 47183
+# Auto-Sync: 2026-02-20 03:50:36 | Port: 47183
