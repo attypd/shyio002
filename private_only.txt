@@ -51,4 +51,4 @@ XY Plus,http://url.cdnhs.store:42699/hstw.php?id=XYPlus
 XY Mix,http://url.cdnhs.store:42699/hstw.php?id=XYMix
 XXL,http://url.cdnhs.store:42699/hstw.php?id=XXL
 
-# Sync: 2026-02-21 16:44:11
+# Sync: 2026-02-21 17:14:41
