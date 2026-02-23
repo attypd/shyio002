@@ -830,4 +830,4 @@ XY Plus,http://url.cdnhs.store:32968/hstw.php?id=XYPlus
 XY Mix,http://url.cdnhs.store:32968/hstw.php?id=XYMix
 XXL,http://url.cdnhs.store:32968/hstw.php?id=XXL
 
-# Auto-Sync: 2026-02-23 12:36:01 | Port: 32968
+# Auto-Sync: 2026-02-23 13:57:55 | Port: 32968
