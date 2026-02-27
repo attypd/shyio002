@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 # --- 配置信息 ---
 DOMAIN = "url.cdnhs.store"
 # 002 仓库对应的三个目标文件
-FILE_LIST = ["cvs_mylive.txt", "total_live.txt", "private_only.txt"]
+FILE_LIST = ["total_live.txt", "private_only.txt"]
 
 def check_port(port):
     """TCP 底层探测，直接绕过 Web 拦截"""
