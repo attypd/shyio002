@@ -125,6 +125,10 @@ mySUPER煲劇,http://url.cdnhs.store:32999/hstw.php?id=MytvWatchTVSeries
 mySUPER劇場,http://url.cdnhs.store:32999/hstw.php?id=MytvTheater
 mySUPER話當年,http://url.cdnhs.store:32999/hstw.php?id=MytvTalkAboutThePast
 中国电影频道,http://url.cdnhs.store:32999/hstw.php?id=MytvChinaMovie#http://url.cdnhs.store:32999/hstw.php?id=CMCMoviesHK
+HOY怪谈,http://url.cdnhs.store:32999/hkfree.php?id=37
+HOY生活,http://url.cdnhs.store:32999/hkfree.php?id=35
+HOY剧集,http://url.cdnhs.store:32999/hkfree.php?id=36
+
 中国大陆,#genre#
 CCTV1,http://url.cdnhs.store:32999/hstw.php?id=cctv1hd#http://url.cdnhs.store:32999/hstw.php?id=CCTV1HD4M#http://live.cooltv.top/tv/aishang.php?id=cctv1hd
 CCTV2,http://url.cdnhs.store:32999/hstw.php?id=cctv2hd#http://url.cdnhs.store:32999/hstw.php?id=CCTV2HD4M#http://live.cooltv.top/tv/aishang.php?id=cctv2hd
