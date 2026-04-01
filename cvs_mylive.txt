@@ -695,6 +695,22 @@ VTV9,http://url.cdnhs.store:47370/hstw.php?id=vtv9
 VTV CẦN THƠ,http://url.cdnhs.store:47370/hstw.php?id=vtvCanTho
 
 体育频道,#genre#
+Now 体育 1,http://url.cdnhs.store:47370/hstw.php?id=NowSports1HDHK
+Now 体育 2,http://url.cdnhs.store:47370/hstw.php?id=NowSports2HDHK
+Now 体育 3,http://url.cdnhs.store:47370/hstw.php?id=NowSports3HDHK
+Now 体育 4,http://url.cdnhs.store:47370/hstw.php?id=NowSports4HDHK
+Now 体育 5,http://url.cdnhs.store:47370/hstw.php?id=NowSports5HDHK
+Now 体育 6,http://url.cdnhs.store:47370/hstw.php?id=NowSports6HDHK
+Now 体育 7,http://url.cdnhs.store:47370/hstw.php?id=NowSports7HDHK
+Now 英超 TV,http://url.cdnhs.store:47370/hstw.php?id=NowSportsPremierLeagueTV
+Now 英超 1,http://url.cdnhs.store:47370/hstw.php?id=NowSportsPremierLeague1HK
+Now 英超 2,http://url.cdnhs.store:47370/hstw.php?id=NowSportsPremierLeague2HK
+Now 英超 3,http://url.cdnhs.store:47370/hstw.php?id=NowSportsPremierLeague3HK
+Now 英超 4,http://url.cdnhs.store:47370/hstw.php?id=NowSportsPremierLeague4HK
+Now 英超 5,http://url.cdnhs.store:47370/hstw.php?id=NowSportsPremierLeague5HK
+Now 英超 6,http://url.cdnhs.store:47370/hstw.php?id=NowSportsPremierLeague6HK
+Now 英超 7,http://url.cdnhs.store:47370/hstw.php?id=NowSportsPremierLeague7HK
+
 bEIN Sports 1,http://url.cdnhs.store:47370/hstw.php?id=beINSPORTS1HK
 bEIN Sports 2,http://url.cdnhs.store:47370/hstw.php?id=beINSPORTS2HK
 bEIN Sports 3,http://url.cdnhs.store:47370/hstw.php?id=beINSPORTS3HK#http://url.cdnhs.store:47370/hstw.php?id=beINSports3FHDMY#http://url.cdnhs.store:47370/hstw.php?id=beINSports3HDMY
