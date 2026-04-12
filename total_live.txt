@@ -191,6 +191,7 @@ CETV4,http://url.cdnhs.store:8888/hstw.php?id=CETV4SD
 五星体育,http://url.cdnhs.store:8888/hstw.php?id=wxtyhd
 广东体育,http://url.cdnhs.store:8888/hstw.php?id=GDsports
 CCTV14,http://live.cooltv.top/tv/aishang.php?id=cctv14hd
+
 国内高清,#genre#
 CCTV1,http://url.cdnhs.store:8888/xjcn.php?id=cctv1
 CCTV2,http://url.cdnhs.store:8888/xjcn.php?id=cctv2
@@ -248,6 +249,7 @@ CCTV央视台球,http://url.cdnhs.store:8888/xjcn.php?id=汕头文旅
 安徽卫视,http://live.cooltv.top/tv/aishang.php?id=ahwshd
 江西卫视,http://live.cooltv.top/tv/aishang.php?id=jxwshd
 河南卫视,http://live.cooltv.top/tv/aishang.php?id=hnwshd
+
 新加坡,#genre#
 Ch 5,http://url.cdnhs.store:8888/hstw.php?id=Channel5HD
 Ch 8,http://url.cdnhs.store:8888/hstw.php?id=Channel8HD
@@ -303,6 +305,7 @@ TLC,http://url.cdnhs.store:8888/hstw.php?id=TLCFHD#http://url.cdnhs.store:8888/h
 Asian Food Network,http://url.cdnhs.store:8888/hstw.php?id=AsianFoodNetworkFHD#http://url.cdnhs.store:8888/hstw.php?id=afn#http://url.cdnhs.store:8888/hstw.php?id=AsianFoodNetworkHD
 Crime Investigation,http://url.cdnhs.store:8888/hstw.php?id=CrimeInvestigationFHD#http://url.cdnhs.store:8888/hstw.php?id=CrimeInvestigationHD
 BBC Lifestyle,http://url.cdnhs.store:8888/hstw.php?id=BBCLifestyleFHD#http://url.cdnhs.store:8888/hstw.php?id=BBCLifestyleHD
+
 中国台湾,#genre#
 中视,http://url.cdnhs.store:8888/hstw.php?id=ctvtwhd#http://url.cdnhs.store:8888/hstw.php?id=ctvhshd
 中视经典,http://url.cdnhs.store:8888/hstw.php?id=ctvclassic
@@ -418,7 +421,6 @@ TVBS NEWS,http://url.cdnhs.store:8888/hstw.php?id=tvbs-news
 纬来电影,http://url.cdnhs.store:8888/hstw.php?id=VideolandMoviesWJ#http://url.cdnhs.store:8888/hstw.php?id=VLMovies
 靖天电影台,http://url.cdnhs.store:8888/hstw.php?id=goldentvmovies
 Thrill惊悚,http://url.cdnhs.store:8888/hstw.php?id=121#http://url.cdnhs.store:8888/hstw.php?id=ThrillHK#http://url.cdnhs.store:8888/hstw.php?id=MytvThrill
-Thrill惊悚,http://url.cdnhs.store:8888/hstw.php?id=121
 AXN頻道,http://url.cdnhs.store:8888/hstw.php?id=axntw#http://url.cdnhs.store:8888/hstw.php?id=102
 华纳电影,http://url.cdnhs.store:8888/hstw.php?id=warnertv#http://url.cdnhs.store:8888/hstw.php?id=warner-tvwj#http://url.cdnhs.store:8888/hstw.php?id=wbtv
 StarMovies,http://url.cdnhs.store:8888/hstw.php?id=StarMovies
@@ -482,6 +484,7 @@ MezzoLive,http://url.cdnhs.store:8888/hstw.php?id=mezzolive
 信吉,http://url.cdnhs.store:8888/hstw.php?id=SJTV
 信大,http://url.cdnhs.store:8888/hstw.php?id=sindatv
 大立,http://url.cdnhs.store:8888/hstw.php?id=dalitv
+
 韩国,#genre#
 KBS World,http://url.cdnhs.store:8888/hstw.php?id=KBSWorldFHD#http://url.cdnhs.store:8888/hstw.php?id=KBSWorld#http://url.cdnhs.store:8888/hstw.php?id=kbsworld
 ONE,http://url.cdnhs.store:8888/hstw.php?id=OneFHDCN#http://url.cdnhs.store:8888/hstw.php?id=OneFHDMY#http://url.cdnhs.store:8888/hstw.php?id=OneFHDKOR#http://url.cdnhs.store:8888/hstw.php?id=OneHDCN#http://url.cdnhs.store:8888/hstw.php?id=OneHDMY#http://url.cdnhs.store:8888/hstw.php?id=OneHDKOR#http://url.cdnhs.store:8888/hstw.php?id=ONEMalay
@@ -537,6 +540,7 @@ Screen,http://url.cdnhs.store:8888/hstw.php?id=screen
 BrainTV,http://url.cdnhs.store:8888/hstw.php?id=Braintv
 CTS,http://url.cdnhs.store:8888/hstw.php?id=cts
 GTV Luxury,http://url.cdnhs.store:8888/hstw.php?id=gtvkr
+
 广东频道,#genre#
 广东珠江576p,http://27.41.245.32:801/hls/25/index.m3u8
 广东珠江720p,https://t.freetv.fun/live/yan-dong-zhu-jiang-2.m3u8
@@ -561,6 +565,7 @@ GTV Luxury,http://url.cdnhs.store:8888/hstw.php?id=gtvkr
 广州综合720p,https://tencentplay.gztv.com/live/zonghes.m3u8?txSecret=9e5008d4b91944fa76a957a93ae54870&txTime=1903e5f1cfd#http://r.jdshipin.com/iR6Gq#http://php.jdshipin.com:8880/gztv.php?id=zhonghe#http://111.170.156.74:3344/地方/地方/guangdong/guangzhou.php?id=zhonghe
 广州新闻720p,https://tencentplay.gztv.com/live/xinwen.m3u8?txSecret=d217bd6cf85c93e3b47b96504cd2dc1c&txTime=18e6ff29019#http://111.170.156.74:3344/地方/地方/guangdong/guangzhou.php?id=xinwen
 广州南国都市1080p,http://tencentplaygsm.gztv.com/live/nanguodushi.m3u8#https://tencentplay.gztv.com/live/nanguodushi.m3u8?txSecret=550af55c0ea34ce492748481415b6dfa&txTime=1903e7b17de
+
 日本,#genre#
 100％ヒッツ！スペースシャワーTV プラス,http://url.cdnhs.store:8888/hstw.php?id=100HitsSpaceShowerTVPlusHD
 ABCテレビ,http://url.cdnhs.store:8888/hstw.php?id=ABCTV
@@ -655,6 +660,7 @@ WOWOWライブ,http://url.cdnhs.store:8888/hstw.php?id=WOWOWLiveHD
 釣りビジョン,http://url.cdnhs.store:8888/hstw.php?id=BSFishingVisionHD
 鉄道チャンネル,http://url.cdnhs.store:8888/hstw.php?id=RailwayChannelHD
 関西テレビ,http://url.cdnhs.store:8888/hstw.php?id=KansaitvHD
+
 泰国,#genre#
 CH3,http://url.cdnhs.store:8888/hstw.php?id=ch3
 CH5,http://url.cdnhs.store:8888/hstw.php?id=ch5
@@ -687,6 +693,7 @@ VTV7,http://url.cdnhs.store:8888/hstw.php?id=vtv7
 VTV8,http://url.cdnhs.store:8888/hstw.php?id=vtv8
 VTV9,http://url.cdnhs.store:8888/hstw.php?id=vtv9
 VTV CẦN THƠ,http://url.cdnhs.store:8888/hstw.php?id=vtvCanTho
+
 体育频道,#genre#
 Now 体育 1,http://url.cdnhs.store:8888/hstw.php?id=NowSports1HDHK
 Now 体育 2,http://url.cdnhs.store:8888/hstw.php?id=NowSports2HDHK
@@ -758,6 +765,7 @@ SBS Golf2,http://url.cdnhs.store:8888/hstw.php?id=sbsgolf2
 BilliardsTV,http://url.cdnhs.store:8888/hstw.php?id=billiardtv
 tVN Sports,http://url.cdnhs.store:8888/hstw.php?id=tvnsports
 Spotv Prime,http://url.cdnhs.store:8888/hstw.php?id=sportsprime
+
 新闻频道,#genre#
 RTM Asean,http://url.cdnhs.store:8888/hstw.php?id=RTMAseanFHD
 BeritaRTM,http://url.cdnhs.store:8888/hstw.php?id=BeritartmFHD#http://url.cdnhs.store:8888/hstw.php?id=Beritartm
@@ -773,6 +781,7 @@ Bloomberg Television,http://url.cdnhs.store:8888/hstw.php?id=BloombergFHD#http:/
 ABC Australia,http://url.cdnhs.store:8888/hstw.php?id=ABCAustraliaFHD#http://url.cdnhs.store:8888/hstw.php?id=ABCAustraliaHD
 DW English,http://url.cdnhs.store:8888/hstw.php?id=DW_HD#http://url.cdnhs.store:8888/hstw.php?id=DWHD
 France24,http://url.cdnhs.store:8888/hstw.php?id=France24_HD#http://url.cdnhs.store:8888/hstw.php?id=France24HD
+
 电影频道,#genre#
 摇滚电影,http://url.cdnhs.store:8888/hstw.php?id=MytvRockAction#http://url.cdnhs.store:8888/hstw.php?id=ROCKAction#http://url.cdnhs.store:8888/hstw.php?id=CRTX
 摇滚极限,http://url.cdnhs.store:8888/hstw.php?id=MytvRockExtreme
@@ -784,6 +793,7 @@ Rialto Classic Movies,http://url.cdnhs.store:8888/hstw.php?id=RialtoClassicMovie
 CHC动作电影,http://url.cdnhs.store:8888/hstw.php?id=chcaction#http://url.cdnhs.store:8888/hstw.php?id=mgchcaction
 CHC家庭电影,http://url.cdnhs.store:8888/hstw.php?id=mgchcfamily#http://url.cdnhs.store:8888/hstw.php?id=chcfamily
 CHC影迷电影,http://url.cdnhs.store:8888/hstw.php?id=mgchchdmovie#http://url.cdnhs.store:8888/hstw.php?id=chchdmovie
+
 娱乐综合,#genre#
 無線衛星亞洲台,http://url.cdnhs.store:8888/hstw.php?id=MytvTvbsAsia#http://url.cdnhs.store:8888/hstw.php?id=TVBSAsiaHK
 亚洲综合娱乐台,http://url.cdnhs.store:8888/hstw.php?id=MYTVASIAVARIETY
@@ -799,56 +809,158 @@ TRACE Urban,http://url.cdnhs.store:8888/hstw.php?id=traceurbansg
 Sun Music,http://url.cdnhs.store:8888/hstw.php?id=SunMusicFHD#http://url.cdnhs.store:8888/hstw.php?id=SunMusicHD
 MTV Live,http://url.cdnhs.store:8888/hstw.php?id=MTVLiveFHD#http://url.cdnhs.store:8888/hstw.php?id=MTVLiveHD#http://url.cdnhs.store:8888/hstw.php?id=MTVHD
 私密频道_1818,#genre#
+
+
 松视1,http://url.cdnhs.store:8888/hstw.php?id=sonsee1
+
+
 松视2,http://url.cdnhs.store:8888/hstw.php?id=sonsee2
+
+
 松视3,http://url.cdnhs.store:8888/hstw.php?id=SonSee3hd
+
+
 彩虹e,http://url.cdnhs.store:8888/hstw.php?id=RainBowEhd
+
+
 K频道,http://url.cdnhs.store:8888/hstw.php?id=RainBowK
+
+
 彩虹电影台,http://url.cdnhs.store:8888/hstw.php?id=Rainbowmovie
+
+
 潘朵啦玩美台,http://url.cdnhs.store:8888/hstw.php?id=PandoraWanmei
+
+
 惊艳成人电影,http://url.cdnhs.store:8888/hstw.php?id=Amazingchannel
+
+
 香蕉台,http://url.cdnhs.store:8888/hstw.php?id=Bananachannel
+
+
 Happy,http://url.cdnhs.store:8888/hstw.php?id=HappyHD
+
+
 JStar極限台电影频道,http://url.cdnhs.store:8888/hstw.php?id=JStarMovies
+
+
 Playboy TV,http://url.cdnhs.store:8888/hstw.php?id=PlayboyTV
+
+
 アイドル専門チャンネルＰｉｇｏｏ,http://url.cdnhs.store:8888/hstw.php?id=IdolspecialtychannelPigooHD
+
+
 Babes TV,http://url.cdnhs.store:8888/hstw.php?id=BabesTV
+
+
 Red Lips,http://url.cdnhs.store:8888/hstw.php?id=RedLips
+
+
 RusskayaNoch,http://url.cdnhs.store:8888/hstw.php?id=RusskayaNoch
+
+
 BrazzersTV,http://url.cdnhs.store:8888/hstw.php?id=BrazzersTVEurope
+
+
 BrazzersTV HD,http://url.cdnhs.store:8888/hstw.php?id=BrazzersTV2
+
+
 HustlerTV,http://url.cdnhs.store:8888/hstw.php?id=Hustler
+
+
 HustlerTV,http://url.cdnhs.store:8888/hstw.php?id=hustlertv
+
+
 Penthouse Gold,http://url.cdnhs.store:8888/hstw.php?id=PenthouseGold
+
+
 Penthouse Gold,http://url.cdnhs.store:8888/hstw.php?id=penthouse
+
+
 Penthouse Reality,http://url.cdnhs.store:8888/hstw.php?id=PenthouseQuickies
+
+
 OX-AX,http://url.cdnhs.store:8888/hstw.php?id=Ohah
+
+
 Vivid Red,http://url.cdnhs.store:8888/hstw.php?id=VividRed
+
+
 Eroxxx,http://url.cdnhs.store:8888/hstw.php?id=Eroxxx
+
+
 Extasy,http://url.cdnhs.store:8888/hstw.php?id=Extasy
+
+
 ExtasyHD,http://url.cdnhs.store:8888/hstw.php?id=ExtasyHD
+
+
 PrivateTV,http://url.cdnhs.store:8888/hstw.php?id=PrivateTV
+
+
 Red Light,http://url.cdnhs.store:8888/hstw.php?id=Redlight
+
+
 CineMan私密频道,http://url.cdnhs.store:8888/hstw.php?id=CineMan私密频道
+
+
 CineMan私密频道2,http://url.cdnhs.store:8888/hstw.php?id=CineMan私密频道2
+
+
 WAAYH,http://url.cdnhs.store:8888/hstw.php?id=Shalun
+
+
 DorcelTV,http://url.cdnhs.store:8888/hstw.php?id=DorcelTV
+
+
 FapTV 2,http://url.cdnhs.store:8888/hstw.php?id=FapTV2
+
+
 FapTV 3,http://url.cdnhs.store:8888/hstw.php?id=FapTV3
+
+
 FapTV 4,http://url.cdnhs.store:8888/hstw.php?id=FapTV4
+
+
 FapTV Parody,http://url.cdnhs.store:8888/hstw.php?id=FapTVParody
+
+
 FapTV Compilation,http://url.cdnhs.store:8888/hstw.php?id=FapTVCompilation
+
+
 FapTV Anal,http://url.cdnhs.store:8888/hstw.php?id=FapTVAnal
+
+
 FapTV Teens,http://url.cdnhs.store:8888/hstw.php?id=FapTVTeens
+
+
 FapTV Lesbian,http://url.cdnhs.store:8888/hstw.php?id=FapTVLesbian
+
+
 FapTV BBW,http://url.cdnhs.store:8888/hstw.php?id=FapTVBBW
+
+
 BlueHustler,http://url.cdnhs.store:8888/hstw.php?id=BlueHustler
+
+
 KINO私密频道,http://url.cdnhs.store:8888/hstw.php?id=Kino私密频道
+
+
 Pinko Club,http://url.cdnhs.store:8888/hstw.php?id=PinkOTV
+
+
 BarleyLegal,http://url.cdnhs.store:8888/hstw.php?id=Barelylegal
+
+
 XY Max,http://url.cdnhs.store:8888/hstw.php?id=XYMax
+
+
 XY Plus,http://url.cdnhs.store:8888/hstw.php?id=XYPlus
+
+
 XY Mix,http://url.cdnhs.store:8888/hstw.php?id=XYMix
+
+
 XXL,http://url.cdnhs.store:8888/hstw.php?id=XXL
 
-# Auto-Sync: 2026-02-27 23:59:20 | Port: 48559
+
