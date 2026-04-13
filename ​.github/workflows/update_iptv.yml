@@ -1,0 +1,51 @@
+name: IPTV-Auto-Sync
+
+on:
+  schedule:
+    # 自动运行时间 (UTC 时间)：
+    # 22:00 UTC = 06:00 北京时间 (早间同步)
+    # 04:00 UTC = 12:00 北京时间 (午间同步)
+    # 12:00 UTC = 20:00 北京时间 (晚间高峰同步)
+    - cron: '0 22,4,12 * * *'
+  workflow_dispatch: # 支持手动点击运行
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Dependencies
+        run: |
+          pip install requests pycryptodome
+          # 必须安装 pycryptodome 否则 AES 解密会报错
+
+      - name: Execute Script
+        run: |
+          python update_all.py
+          # 运行我们刚刚写好的全流程解密脚本
+
+      - name: Deploy to Repo
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          # 核心修正：只添加 live.txt，解决 1000069037.jpg 中的红色报错
+          if [ -f "live.txt" ]; then
+            git add live.txt
+            # 如果之前有旧的 m3u 想彻底删除，可以解封下面这行:
+            # git rm --cached live.m3u --ignore-unmatch
+            
+            git commit -m "Auto Update $(date +'%Y-%m-%d %H:%M:%S')" || exit 0
+            git push
+          else
+            echo "[-] 错误：未发现生成的 live.txt，跳过部署。"
+            exit 1
+          fi
