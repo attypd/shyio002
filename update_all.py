@@ -3,77 +3,60 @@ import base64
 import json
 import re
 from Crypto.Cipher import AES
-from Crypto.Util.Padding import unpad
 
-# --- 配置区 ---
+# --- 核心配置 ---
 API_URL = "http://api.cdnhs.store/iptv//login3.php"
-# 基于抓包图 1000068984.jpg 的身份信息
-LOGIN_DATA = {
+# 身份指纹
+LOGIN_PAYLOAD = {
     'login': '{"region":"","mac":"d8:45:65:5c:8d:4b","androidid":"d879d7610bc68a18","model":"23078RKD5C","nettype":"","appname":"MYlive"}'
 }
 
-# 模拟 MT 搜索出的潜在 Key
-KEYS = ["6688cool_key_668", "1234567890123456", "MYlive6688cool_!"]
+# 扩充 Key 库 (根据常见骆驼壳变体)
+KEYS = [
+    "6688cool_key_668", 
+    "1234567890123456", 
+    "6688cool_key_888",
+    "cdnhs_store_6688"
+]
 
-def decrypt_payload(cipher_text):
+def force_decode(raw_str):
+    """强行提取 JSON 部分，防止解密后带尾巴"""
+    match = re.search(r'\{.*\}', raw_str, re.DOTALL)
+    return match.group(0) if match else None
+
+def crack():
+    headers = {"User-Agent": "MSIE", "Content-Type": "application/x-www-form-urlencoded"}
+    print("[+] 正在请求云端密文...")
     try:
-        raw_bytes = base64.b64decode(cipher_text)
-    except:
-        return None
-
-    for k in KEYS:
-        k_b = k.encode('utf-8')
-        try:
-            # 严格匹配 MT 中的 CBC 模式
-            # 大部分骆驼壳 IV 与 Key 相同
-            cipher = AES.new(k_b, AES.MODE_CBC, iv=k_b)
-            decrypted = cipher.decrypt(raw_bytes)
-            
-            # 容错解码逻辑
-            try:
-                plain = unpad(decrypted, AES.block_size).decode('utf-8')
-            except:
-                plain = decrypted.decode('utf-8', errors='ignore')
-
-            if '"data"' in plain:
-                print(f"[*] 成功碰撞出密钥: {k}")
-                return plain
-        except:
-            continue
-    return None
-
-def main():
-    headers = {
-        "User-Agent": "MSIE",
-        "Content-Type": "application/x-www-form-urlencoded",
-        "Host": "api.cdnhs.store"
-    }
-    print("[*] 正在请求云端数据...")
-    try:
-        resp = requests.post(API_URL, data=LOGIN_DATA, headers=headers, timeout=15)
-        if resp.status_code != 200:
-            print(f"[!] 服务器响应错误: {resp.status_code}")
-            return
-
-        # 对应图 1000068992.jpg 中的超长密文处理
-        json_str = decrypt_payload(resp.text.strip())
+        r = requests.post(API_URL, data=LOGIN_PAYLOAD, headers=headers, timeout=15)
+        cipher_text = r.text.strip()
+        print(f"[*] 获取密文长度: {len(cipher_text)}")
         
-        if json_str:
-            # 提取 JSON 核心部分
-            match = re.search(r'\{.*\}', json_str, re.DOTALL)
-            if match:
-                res_data = json.loads(match.group(0))
-                channels = res_data.get('data', [])
+        raw_bytes = base64.b64decode(cipher_text)
+        for k in KEYS:
+            kb = k.encode('utf-8')
+            try:
+                # 严格执行截图中的 CBC 模式
+                cipher = AES.new(kb, AES.MODE_CBC, iv=kb[:16])
+                decrypted = cipher.decrypt(raw_bytes).decode('utf-8', errors='ignore')
                 
-                with open("live.m3u", "w", encoding="utf-8") as f:
-                    f.write("#EXTM3U name=\"Auto_Update\"\n")
-                    for ch in channels:
-                        f.write(f"#EXTINF:-1,{ch.get('name')}\n{ch.get('url')}\n")
-                print(f"[+] 成功！已更新 {len(channels)} 个频道。")
-        else:
-            print("[!] 破解失败，请检查 Key 是否有变动。")
+                json_str = force_decode(decrypted)
+                if json_str and '"data"' in json_str:
+                    print(f"[*] 爆破成功！Key: {k}")
+                    data = json.loads(json_str)
+                    with open("live.m3u", "w", encoding="utf-8") as f:
+                        f.write("#EXTM3U\n")
+                        for item in data.get('data', []):
+                            f.write(f"#EXTINF:-1,{item['name']}\n{item['url']}\n")
+                    return True
+            except: continue
+        return False
     except Exception as e:
-        print(f"[!] 运行异常: {e}")
+        print(f"[-] 错误: {e}")
+        return False
 
 if __name__ == "__main__":
-    main()
+    if crack():
+        print("[+] 同步成功，live.m3u 已生成。")
+    else:
+        print("[!] 破解失败。请去 MT 搜索 const-string 并贴给我。")
