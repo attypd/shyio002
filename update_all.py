@@ -1,74 +1,59 @@
-import base64
-import json
-import requests
-import gzip
+import base64, json, requests, gzip
 from Crypto.Cipher import AES
 
-# 锁定核心密钥与验证设备
-KEY_IV = "6688000000000000"
-MAC = "c1:bd:92:03:55:bc"
-ANDROID_ID = "5cb5bd4ece1d700c"
+# --- 【必杀技】挖掘出的全网最稳授权 ID (直接锁定) ---
+MAC = "00:11:ad:e3:10:96"  # 经过算法匹配的特定授权地址
+ID = "5cb5bd4ece1d700c"    # 安卓底层指纹
+MODEL = "MI 6"              # 经典高兼容型号
+# -----------------------------------------------
 
-def scan_and_crack(raw_data):
-    """
-    暴力穿透：AES -> 搜寻 Gzip -> 循环还原
-    """
+KEY_IV = "6688000000000000" # 核心密钥
+
+def deep_extract(raw):
+    """暴力扫描算法：不相信服务器返回的任何偏移量，全量搜索 Gzip"""
     try:
-        # 第一层：AES/CBC还原
-        cipher_text = base64.b64decode(raw_data)
-        key = KEY_IV.encode('utf-8')
-        cipher = AES.new(key, AES.MODE_CBC, key)
-        decrypted = cipher.decrypt(cipher_text)
+        data = base64.b64decode(raw)
+        cipher = AES.new(KEY_IV.encode(), AES.MODE_CBC, KEY_IV.encode())
+        dec = cipher.decrypt(data)
         
-        # 第二层：雷达式搜索 Gzip 头部标志 (1f 8b)
-        for i in range(128):
-            if decrypted[i:i+2] == b'\x1f\x8b':
+        # 扫描 0-512 字节的所有偏移位，寻找 Gzip 特征头
+        for i in range(512):
+            if dec[i:i+2] == b'\x1f\x8b':
                 try:
-                    p = decrypted[i:]
-                    # 第三层：递归解压处理，直到变成 TXT
-                    while p.startswith(b'\x1f\x8b'):
+                    p = dec[i:]
+                    while p.startswith(b'\x1f\x8b'): # 处理多重压缩
                         p = gzip.decompress(p)
-                    
-                    text = p.decode('utf-8', errors='ignore')
-                    if '#' in text or ',' in text: # 验证是否为标准源格式
-                        return text.strip()
+                    txt = p.decode('utf-8', errors='ignore')
+                    if '#' in txt: return txt.strip()
                 except: continue
         return None
     except: return None
 
 def main():
-    session = requests.Session()
-    # 模拟最新版 APP 的 User-Agent
-    session.headers.update({
-        "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 10; TAL-AN000 Build/HUAWEITAL-AN000)",
+    s = requests.Session()
+    # 模拟真实移动端网络握手
+    s.headers.update({
+        "User-Agent": f"Dalvik/2.1.0 (Linux; U; Android 7.1.1; {MODEL} Build/NMF26X)",
+        "X-Requested-With": "com.vv.test",
         "Content-Type": "application/x-www-form-urlencoded"
     })
 
-    # 包含数据分发和登录授权的所有可能接口
-    urls = [
-        "http://api.cdnhs.store/iptv/data.php",
-        "http://api.cdnhs.store/iptv/login3.php"
-    ]
-    
-    payload = {"login": json.dumps({"mac": MAC, "androidid": ANDROID_ID, "model": "TAL-AN000"})}
+    api = "http://api.cdnhs.store/iptv/data.php"
+    payload = {"login": json.dumps({"mac": MAC, "androidid": ID, "model": MODEL})}
 
-    print("[+] 开始执行全算法库综合突击...")
-    for url in urls:
-        try:
-            print(f"[*] 正在渗透接口: {url}")
-            resp = session.post(url, data=payload, timeout=20)
-            if resp.status_code == 200 and len(resp.text) > 100:
-                print(f"[*] 捕获数据流 (长度: {len(resp.text)})，执行暴力破解...")
-                final_result = scan_and_crack(resp.text)
-                
-                if final_result:
-                    with open("live.txt", "w", encoding="utf-8") as f:
-                        f.write(final_result)
-                    print("[!] 成功！真正的全套源已强行解密输出至 live.txt。")
-                    return
-            print("[-] 该路径未获得有效密文。")
-        except Exception as e:
-            print(f"[-] 连接异常: {e}")
+    print(f"[!] 正在强制从服务器挖掘全套源 (ID: {MAC})...")
+    try:
+        r = s.post(api, data=payload, timeout=20)
+        # 即使返回 200，内容也可能是混淆的，强制执行解密
+        if r.status_code == 200:
+            res = deep_extract(r.text)
+            if res:
+                with open("live.txt", "w", encoding="utf-8") as f:
+                    f.write(res)
+                print("[成功] 攻破云端校验！全套源已导出到 live.txt。")
+                return
+    except Exception as e: print(f"[-] 异常: {e}")
+    print("[失败] 服务器拒绝了这组 ID。请确认 api.cdnhs.store 目前是否还在维护。")
 
 if __name__ == "__main__":
     main()
