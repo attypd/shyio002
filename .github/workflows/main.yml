@@ -1,1 +1,43 @@
-s
+name: 15分钟自动扫描对时更新
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run_update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: 设置 Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: 同步并运行扫描
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          # 1. 核心修复：在脚本改动文件前先执行 pull，解决 128 错误
+          git pull --rebase origin main
+          
+          # 2. 运行脚本（此时本地是干净的，不会冲突）
+          python update_all.py
+          
+          # 3. 提交变动
+          if [ -n "$(git status --porcelain)" ]; then
+            git add .
+            git commit -m "280 自动对时: $(date +'%Y-%m-%d %H:%M:%S')"
+            git push origin main
+          else
+            echo "没有检测到端口变动，跳过推送。"
+          fi
